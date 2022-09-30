@@ -2,7 +2,7 @@
 
 /* header and nav layout */
 header {
-  background-color: var(--color-blue);
+  background-color: var(--color-purple);
   color: var(--color-white);
 }
 
@@ -21,7 +21,7 @@ header nav {
     'sections sections sections sections' 1fr / 36px 130px 1fr 60px;
   align-items: center;
   width: 100%;
-  background-color: var(--color-blue);
+  background-color: var(--color-purple);
   color: var(--color-white);
   z-index: 2;
 }
@@ -33,7 +33,7 @@ header nav[aria-expanded=true] {
   position: fixed;
   min-height: 100vh;
   width: 70%;
-  background-color: var(--color-blue);
+  background-color: var(--color-purple);
   color: var(--color-white);
   box-shadow: 30vw 0 rgba(0,0,0,0.7);
   overflow-y: auto;
@@ -55,7 +55,7 @@ header nav[aria-expanded=true] {
 
 @media (min-width: 900px) {
   header {
-    background-color: var(--color-blue);
+    background-color: var(--color-purple);
   }
 
   header nav {
@@ -91,7 +91,7 @@ header nav > div {
 /* brand */
 header nav .nav-brand {
   grid-area: brand;
-  background-color: var(--color-blue);
+  background-color: var(--color-purple);
   z-index: 2;
 }
 
@@ -209,7 +209,7 @@ header nav .nav-partner img {
   header nav .nav-partners-title span {
     position: relative;
     padding: 0 5px;
-    background-color: var(--color-blue);
+    background-color: var(--color-purple);
   }
 }
 
@@ -314,7 +314,7 @@ header nav .nav-sections .nav-drop span {
 
 header nav .nav-sections a:hover,
 header nav .nav-sections .nav-drop span:hover {
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-purple-darker);
   cursor: pointer;
 }
 
@@ -363,7 +363,7 @@ header nav[aria-expanded=true] .nav-sections .nav-drop[aria-expanded="false"] ul
   }
 
   header nav .nav-sections ul > li:hover {
-    background-color: var(--color-blue-dark);
+    background-color: var(--color-purple-darker);
   }
 
   header nav .nav-sections a, 
@@ -410,7 +410,7 @@ header nav[aria-expanded=true] .nav-sections .nav-drop[aria-expanded="false"] ul
   }
 
   header nav .nav-sections > ul > li[aria-expanded=true] {
-    background-color: var(--color-blue-dark);
+    background-color: var(--color-purple-darker);
   }
 
   header nav .nav-sections > ul > li[aria-expanded=true] ul {
@@ -422,7 +422,7 @@ header nav[aria-expanded=true] .nav-sections .nav-drop[aria-expanded="false"] ul
     min-width: max-content;
     height: unset;
     padding: 10px 0;
-    background-color: var(--color-blue-dark);
+    background-color: var(--color-purple-darker);
     text-align: left;
     text-transform: initial;
     z-index: 2;
@@ -434,7 +434,7 @@ header nav[aria-expanded=true] .nav-sections .nav-drop[aria-expanded="false"] ul
   }
 
   header nav .nav-sections > ul > li[aria-expanded=true] ul li a:hover {
-    background-color: var(--color-blue);
+    background-color: var(--color-purple);
   }
 }
 
@@ -493,7 +493,7 @@ header nav .nav-tour {
   grid-area: tour;
   align-self: stretch;
   position: relative;
-  background-color: var(--color-blue-darker);
+  background-color: var(--color-purple-darker);
 }
 
 header nav[aria-expanded=true] .nav-tour {
@@ -575,7 +575,7 @@ header nav[aria-expanded=true] .nav-user button {
 }
 
 header nav .nav-user button:hover {
-  background-color: var(--color-blue);
+  background-color: var(--color-purple);
 }
 
 header nav .nav-user button .icon.icon-caret {
@@ -616,7 +616,7 @@ header nav .nav-user span {
 }
 
 header nav .nav-user span:hover {
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-purple-darker);
   cursor: pointer;
 }
 
@@ -641,7 +641,7 @@ header nav .nav-user .icon.icon-spinner svg {
 @media (min-width: 700px) {
   header nav[aria-expanded=false] .nav-user {
     display: block;
-    background-color: var(--color-blue-darker);
+    background-color: var(--color-purple-darker);
   }
 
   header nav[aria-expanded=false] .nav-user span:hover {
