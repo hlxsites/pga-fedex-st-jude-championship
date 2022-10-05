@@ -2,8 +2,14 @@
 
 /* header and nav layout */
 header {
-  background-color: var(--color-purple);
-  color: var(--color-white);
+  --nav-color: var(--color-purple);
+  --nav-secondary-color: var(--color-blue-darker);
+  --nav-hover-color: var(--color-purple-dark);
+  --nav-border-color: var(--color-purple-light);
+  --nav-text-color: var(--color-white);
+
+  background-color: var(--nav-color);
+  color: var(--nav-text-color);
 }
 
 header .header {
@@ -21,20 +27,20 @@ header nav {
     'sections sections sections sections' 1fr / 36px 130px 1fr 60px;
   align-items: center;
   width: 100%;
-  background-color: var(--color-purple);
-  color: var(--color-white);
+  background-color: var(--nav-color);
+  color: var(--nav-text-color);
   z-index: 2;
 }
 
 header nav[aria-expanded=true] {
   grid-template: 'hamburger brand' 'sections sections' 'user user' '. .' 'social social';
   grid-template-columns: 36px 1fr;
-  grid-template-rows: var(--nav-height) auto auto 1fr auto;
+  grid-template-rows: 64px auto auto 1fr auto;
   position: fixed;
   min-height: 100vh;
   width: 70%;
-  background-color: var(--color-purple);
-  color: var(--color-white);
+  background-color: var(--nav-color);
+  color: var(--nav-text-color);
   box-shadow: 30vw 0 rgba(0,0,0,0.7);
   overflow-y: auto;
   z-index: 3;
@@ -55,7 +61,7 @@ header nav[aria-expanded=true] {
 
 @media (min-width: 900px) {
   header {
-    background-color: var(--color-purple);
+    background-color: var(--nav-color);
   }
 
   header nav {
@@ -91,12 +97,17 @@ header nav > div {
 /* brand */
 header nav .nav-brand {
   grid-area: brand;
-  background-color: var(--color-purple);
+  background-color: var(--nav-color);
   z-index: 2;
 }
 
 header nav .nav-brand.white {
   background-color: var(--color-white);
+}
+
+header nav .nav-brand > a img {
+  width: auto;
+  max-height: var(--nav-height);
 }
 
 header nav[aria-expanded=true] .nav-brand a {
@@ -116,13 +127,13 @@ header nav[aria-expanded=true] .nav-brand a {
   }
 
   header nav .nav-brand > a img {
+    max-height: unset;
     margin: 5px 0;
   }
 
   header nav[aria-expanded=false] .nav-brand img {
     width: auto;
-    max-width: unset;
-    max-height: 50px;
+    max-width: 220px;
   }
 }
 
@@ -151,7 +162,7 @@ header nav .nav-partners-title {
 
 header .nav-partner-wrapper {
   position: relative;
-  height: 50px;
+  width: 80px;
 }
 
 header nav[aria-expanded=true] .nav-partner-wrapper {
@@ -179,6 +190,18 @@ header nav .nav-partner img {
 }
 
 @media (min-width: 700px) {
+  header nav .nav-partner-wrapper {
+    position: relative;
+    height: 50px;
+    width: 100%;
+  }
+
+  header nav .nav-partner {
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   header nav[aria-expanded=false] .nav-partners {
     display: block;
     position: unset;
@@ -209,7 +232,7 @@ header nav .nav-partner img {
   header nav .nav-partners-title span {
     position: relative;
     padding: 0 5px;
-    background-color: var(--color-purple);
+    background-color: var(--nav-color);
   }
 }
 
@@ -314,7 +337,7 @@ header nav .nav-sections .nav-drop span {
 
 header nav .nav-sections a:hover,
 header nav .nav-sections .nav-drop span:hover {
-  background-color: var(--color-purple-darker);
+  background-color: var(--nav-hover-color);
   cursor: pointer;
 }
 
@@ -363,7 +386,7 @@ header nav[aria-expanded=true] .nav-sections .nav-drop[aria-expanded="false"] ul
   }
 
   header nav .nav-sections ul > li:hover {
-    background-color: var(--color-purple-darker);
+    background-color: var(--nav-hover-color);
   }
 
   header nav .nav-sections a, 
@@ -410,7 +433,7 @@ header nav[aria-expanded=true] .nav-sections .nav-drop[aria-expanded="false"] ul
   }
 
   header nav .nav-sections > ul > li[aria-expanded=true] {
-    background-color: var(--color-purple-darker);
+    background-color: var(--nav-hover-color);
   }
 
   header nav .nav-sections > ul > li[aria-expanded=true] ul {
@@ -422,7 +445,7 @@ header nav[aria-expanded=true] .nav-sections .nav-drop[aria-expanded="false"] ul
     min-width: max-content;
     height: unset;
     padding: 10px 0;
-    background-color: var(--color-purple-darker);
+    background-color: var(--nav-hover-color);
     text-align: left;
     text-transform: initial;
     z-index: 2;
@@ -434,7 +457,7 @@ header nav[aria-expanded=true] .nav-sections .nav-drop[aria-expanded="false"] ul
   }
 
   header nav .nav-sections > ul > li[aria-expanded=true] ul li a:hover {
-    background-color: var(--color-purple);
+    background-color: var(--nav-color);
   }
 }
 
@@ -448,7 +471,7 @@ header nav[aria-expanded=true] .nav-social {
   display: flex;
   justify-content: center;
   gap: 0 24px;
-  border-top: 1px solid var(--color-blue-light);
+  border-top: 1px solid var(--nav-border-color);
 }
 
 header nav .nav-social svg {
@@ -493,7 +516,7 @@ header nav .nav-tour {
   grid-area: tour;
   align-self: stretch;
   position: relative;
-  background-color: var(--color-purple-darker);
+  background-color: var(--nav-secondary-color);
 }
 
 header nav[aria-expanded=true] .nav-tour {
@@ -541,41 +564,13 @@ header nav .nav-user button {
   cursor: pointer;
 }
 
-header nav .nav-user button[data-status=loading] .icon.icon-user {
-  /* display: none; */
-  visibility: hidden;
-}
-
-header nav .nav-user button[data-status=loading] .icon.icon-spinner svg {
-  animation: spinner linear 3s infinite;
-  opacity: .5;
-}
-
-@keyframes spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-header nav .nav-user button[data-status=initialized] .icon.icon-spinner {
-  display: none;
-  visibility: hidden;
-}
-
-header nav .nav-user button[data-status=initialized] .icon.icon-spinner svg {
-  animation: unset;
-}
-
 header nav[aria-expanded=true] .nav-user button {
   display: block;
   justify-content: flex-start;
 }
 
 header nav .nav-user button:hover {
-  background-color: var(--color-purple);
+  background-color: var(--nav-color);
 }
 
 header nav .nav-user button .icon.icon-caret {
@@ -603,7 +598,6 @@ header nav .nav-user button .icon.icon-caret::after {
 }
 
 header nav[aria-expanded=true] .nav-user button img,
-header nav[aria-expanded=true] .nav-user button .icon.icon-spinner,
 header nav[aria-expanded=true] .nav-user button .icon.icon-caret {
   display: none;
   visibility: hidden;
@@ -616,7 +610,7 @@ header nav .nav-user span {
 }
 
 header nav .nav-user span:hover {
-  background-color: var(--color-purple-darker);
+  background-color: var(--nav-hover-color);
   cursor: pointer;
 }
 
@@ -632,8 +626,7 @@ header nav .nav-user button img {
 }
 
 header nav .nav-user button img,
-header nav .nav-user .icon.icon-user svg,
-header nav .nav-user .icon.icon-spinner svg {
+header nav .nav-user .icon.icon-user svg {
   height: 24px;
   width: 24px;
 }
@@ -641,7 +634,7 @@ header nav .nav-user .icon.icon-spinner svg {
 @media (min-width: 700px) {
   header nav[aria-expanded=false] .nav-user {
     display: block;
-    background-color: var(--color-purple-darker);
+    background-color: var(--nav-secondary-color);
   }
 
   header nav[aria-expanded=false] .nav-user span:hover {
