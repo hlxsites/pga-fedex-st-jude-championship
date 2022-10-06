@@ -31,8 +31,8 @@
   --color-white: #fff;
 
   /* colors assignments */
-  --link-color: var(--color-blue-dark);
-  --link-hover-color: var(--color-blue);
+  --link-color: var(--color-purple);
+  --link-hover-color: var(--color-purple-light);
   --background-color: var(--color-gray-lighter);
   --overlay-background-color: var(--color-blue-lighter);
   --overlay-text-color: var(--color-white);
