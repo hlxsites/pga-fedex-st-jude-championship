@@ -13,6 +13,7 @@
  :root {
   /* colors */
   --color-black: #000;
+  --color-black-95: #000000f2;
   --color-blue: #003360;
   --color-blue-95: #003360f2;
   --color-blue-dark: #04294C;
@@ -29,6 +30,8 @@
   --color-purple-light: #5917a2;
   --color-tan: #C2A36E;
   --color-tan-95: #C2A36Ef2;
+  --color-orange: #FF6600;
+  --color-orange-95: #FF6600f2;
   --color-white: #fff;
 
   /* colors assignments */
