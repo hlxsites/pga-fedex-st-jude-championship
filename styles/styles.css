@@ -38,7 +38,7 @@
   --link-color: var(--color-purple);
   --link-hover-color: var(--color-purple-light);
   --background-color: var(--color-gray-lighter);
-  --overlay-background-color: var(--color-blue-lighter);
+  --overlay-background-color: var(--color-purple);
   --overlay-text-color: var(--color-white);
   --highlight-background-color: var(--color-white);
   --text-color: var(--color-gray-dark);
