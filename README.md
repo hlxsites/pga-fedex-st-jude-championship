@@ -3,6 +3,7 @@
 ## Environments
 - Preview: https://main--fedex-st-jude-championship--hlxsites.hlx.page/
 - Live: https://main--fedex-st-jude-championship--hlxsites.hlx.live/
+- Prod: https://www.fedexchampionship.com/
 
 ## Installation
 
